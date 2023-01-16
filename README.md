@@ -10,10 +10,13 @@ Projet 7 OpenClassRooms -Kasa Location immobilière
 pour référence consulter package.json ligne  "dependencies"
 
 
-
+2- Pour lancer l'application, veuillez rooter sur le répertoire ThomasGue_7_16012023/kasa
+et dans votre terminal lancer la commande: npm start
 
 
 POUR LA PROGRESSION et la sauvegarde sur github:
+
+Attention veuillez rooter sur le répertoire ThomasGue_7_16012023
 
 git add --all
 git commit -m "intitulé du commit"
