@@ -1,0 +1,59 @@
+.leCadre{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}    
+
+.lesTags{
+
+    display: flex;
+    justify-content: flex-start;
+}
+
+.leTag{
+    margin: 5px;
+    padding: 5px;
+    background-color: #FF6060;
+    border-radius: 10px;
+    color: white;
+}
+
+.coverStyle{
+    width: 80%;
+    align-self: center;
+}
+
+.titleStyle{
+
+    color: #FF6060;
+    
+}
+
+.locationStyle{
+
+    color: #FF6060;
+}
+
+.lesDeuxBlocs{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 80%;
+    border: 2px solid red;
+}
+
+.lesSousBlocs{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.boutonPlusInfo{
+
+    background-color: #FF6060;
+    color: white;
+    width: 100%;
+    
+}

@@ -1,0 +1,26 @@
+.sectionCollapses{
+
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+}
+
+
+.bulle{
+
+    width: 1000px;
+    margin: 20px;
+}
+
+.button-Bulle{
+
+    width: 1000px;
+    padding: 5px;
+    background-color: #FF6060;
+    color: #FFFFFF;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+}
