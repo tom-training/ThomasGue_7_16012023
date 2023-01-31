@@ -1,4 +1,4 @@
-import '../../../style/Collapses.css'
+import CollapsesStyle from '../../../style/Collapses.module.css'
 
 function Fiabilite(){
 
@@ -6,7 +6,7 @@ function Fiabilite(){
 
     return(
 
-        <div className="collapse"> Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos
+        <div className={CollapsesStyle.collapse}> Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos
             sont conformes aux logements, et toutes les informations sont régulièrement vérifiées
             par nos équipes. </div>
     )

@@ -12,6 +12,7 @@
 }
 
 .leTag{
+
     margin: 5px;
     padding: 5px;
     background-color: #FF6060;
@@ -20,6 +21,7 @@
 }
 
 .coverStyle{
+
     width: 80%;
     align-self: center;
 }
@@ -36,14 +38,26 @@
 }
 
 .lesDeuxBlocs{
+
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     width: 80%;
-    border: 2px solid red;
+    margin: 5px 0 10px 0;
+   
+}
+
+.blocIntermediaire{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    width: 80%;
+    margin: 5px;
 }
 
 .lesSousBlocs{
+
     width: 45%;
     display: flex;
     flex-direction: column;
@@ -55,5 +69,37 @@
     background-color: #FF6060;
     color: white;
     width: 100%;
+    border: 2px solid blue;
+    display: flexbox;
     
+    
+    align-items: center;
+    padding: 10px 10px 10px 10px;
+    
+}
+
+.imaVector{
+    border: 2px solid green;
+}
+
+.descDiv{
+    border: 2px solid purple;
+    width: 45%;
+}
+
+.blocIm{
+    border: 2px solid yellow;
+    width: 45%;
+}
+
+.textDisplayed{
+
+    color: #FF6060;
+    background-color: #F7F7F7;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.listDisplayed{
+    list-style: none;
 }

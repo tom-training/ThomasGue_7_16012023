@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import Vector from '../../assets/Vector.svg'
 import OpenVector from '../../assets/OpenVector.png'
 
-import '../../style/Card.css'
+import CardCSS from '../../style/Card.module.css'
 
 function Card(){
 
@@ -31,86 +31,94 @@ function Card(){
           setAppartData(appartData)
           console.log(appartData)
           setDataLoading(false)
-          })  
+          })
+            
         .catch((error)=> console.log(error))
     }, [])
       
     return(
 
       <div>
-        <div>
-            
-            L'appartement a l'id suivante {appartId.id}
-       
-        </div>
-
+        
         <div>
             {isDataLoading ?(<div> Ca charge </div>):
             
             (<div> {appartData.map((logt)=>(
 
-              <div key={logt.id} className='leCadre'>
 
-                  <div>{logt.id}</div>
+              logt.id === appartId.id ?(
 
-                  <img src={logt.cover} alt="un appartement"className='coverStyle' />
+              <div key={logt.id} className={CardCSS.leCadre}>
 
-                  <div className='titleStyle'> {logt.title} </div>
+                  <img src={logt.cover} alt="un appartement"className={CardCSS.coverStyle} />
 
-                  <div className='locationStyle'> {logt.location} </div>
+                    <div className={CardCSS.blocIntermediaire}>
 
-                  <div className='lesTags'>
-                    {logt.tags.map((tago)=>(<div key={tago} className='leTag'> {tago} </div>))}
-                  </div>  
+                      <div className={CardCSS.titleStyle}> {logt.title} </div>
 
-                  <div className="lesDeuxBlocs">
+                      <div className={CardCSS.locationStyle}> {logt.location} </div>
 
-                    <div className="lesSousBlocs">
-                      <div className= "boutonPlusInfo" onClick={()=>{
+                      <div className={CardCSS.lesTags}>
+                        {logt.tags.map((tago)=>(<div key={tago} className={CardCSS.leTag}> {tago} </div>))}
+                      </div>  
+                    
+                    </div>
+
+                  <div className={CardCSS.lesDeuxBlocs}>
+
+                    <div className={CardCSS.lesSousBlocs}>
+                      <div className= {CardCSS.boutonPlusInfo} onClick={()=>{
                         if(display){setDisplay(false)}
                         else{setDisplay(true)}
                       }}> 
                       
-                        Description 
-                        {display? (<img src = {OpenVector} alt="vector icon open"/>):
-            
-                        (<img src = {Vector} alt="vector icon closed" />) 
-                        } 
+                        <div className={CardCSS.descDiv}> Description </div>
 
+                        <div className={CardCSS.blocIm}>
+                          {display? (<img src = {OpenVector} alt="vector icon open"/>):
+              
+                          (<img src = {Vector} alt="vector icon closed" className={CardCSS.imaVector}/>) 
+                          } 
+                        </div>
                       </div>
 
                       {display ?(
-                            <div> {logt.description} </div>
+                            <div className={CardCSS.textDisplayed}> {logt.description} </div>
                           )
                           :(null)}
 
                     </div>        
-                    <div className="lesSousBlocs">
+                    <div className={CardCSS.lesSousBlocs}>
 
-                        <div className= "boutonPlusInfo" onClick={()=>{
+                        <div className= {CardCSS.boutonPlusInfo} onClick={()=>{
                             if(displayDeux){setDisplayDeux(false)}
                             else{setDisplayDeux(true)}
                           }}> 
                           
-                            Équipements 
-                            {displayDeux? (<img src = {OpenVector} alt="vector icon open"/>):
-                
-                            (<img src = {Vector} alt="vector icon closed" />) 
-                            } 
-
+                            <div className={CardCSS.descDiv}> Équipements </div>
+                            <div className={CardCSS.blocIm}>
+                              {displayDeux? (<img src = {OpenVector} alt="vector icon open"/>):
+                  
+                              (<img src = {Vector} alt="vector icon closed" className={CardCSS.imaVector}/>) 
+                              } 
+                            </div>
                         </div>
 
                           {displayDeux ?(
-                            <div> {logt.equipments[1]} </div>
+                            <div className={CardCSS.textDisplayed}> {logt.equipments.map((eqpt, id)=>(
+
+                              <ul className={CardCSS.listDisplayed}>
+                                <li key={id}>{eqpt}</li>
+                              </ul>
+
+                            ))} </div>
                           )
                           :(null)}
 
                     </div>      
                   </div>
-
-
               </div>  
-                
+              ):(null)  
               
 
               ))}</div>)}

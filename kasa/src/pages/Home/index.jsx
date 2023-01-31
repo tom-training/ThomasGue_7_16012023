@@ -1,5 +1,5 @@
-import '../../style/Home.css'
-
+import HomeCSS from '../../style/Home.module.css'
+import BannerImg from '../../assets/Banner.png'
 
 import { useState, useEffect } from 'react'
 
@@ -32,27 +32,41 @@ function Home() {
     return (
       <div>
 
-        {isDataLoading ? (
-          <div> Ca load </div>
-        ) : (
-          <div className='homeStyle'> 
-            
-            {
-            
-              appartData.map((logement) => (
+        <div className='Banner'>
+            <img src={BannerImg} alt="Chez vous partout et ailleurs!" />
+        </div>  
 
-                <Appart
 
-                  id = {logement.id}
-                  titre = {logement.title}
-                
-                />  
-              ))
+        <div>
+          {isDataLoading ? (
+            <div> Ca load </div>
+          ) : (
+            <div className={HomeCSS.homeStyle}> 
               
-            }  
-            
-          </div>
-        )}
+              {
+              
+                appartData.map((logement) => (
+
+                  <Appart
+
+                    id = {logement.id}
+                    titre = {logement.title}
+                  
+                  />  
+                ))
+                
+              }  
+              
+            </div>
+          )}
+        </div>
+
+
+        
+
+        
+
+
       
       </div>
     )

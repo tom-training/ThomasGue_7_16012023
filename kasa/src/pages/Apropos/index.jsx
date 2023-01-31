@@ -4,7 +4,7 @@ import Vector from '../../assets/Vector.svg'
 
 import OpenVector from '../../assets/OpenVector.png'
 
-import '../../style/Apropos.css'
+import AproposCSS from '../../style/Apropos.module.css'
 
 import Fiabilite from '../../components/Collapses/Fiabilite'
 import Respect from '../../components/Collapses/Respect'
@@ -20,11 +20,11 @@ function Apropos() {
 
     return (
 
-      <div className="sectionCollapses">
+      <div className={AproposCSS.sectionCollapses}>
 
-        <div className="bulle"> 
+        <div className={AproposCSS.bulle}> 
 
-          <div className="button-Bulle" onClick = {()=>{
+          <div className={AproposCSS.buttonBulle} onClick = {()=>{
                     if(displun){
                         
                         setDisplun(false)
@@ -48,9 +48,9 @@ function Apropos() {
 
         </div>
 
-        <div className="bulle"> 
+        <div className={AproposCSS.bulle}> 
 
-          <div className="button-Bulle" onClick = {()=>{
+          <div className={AproposCSS.buttonBulle} onClick = {()=>{
                     if(displdeux){
                         
                         setDispldeux(false)
@@ -74,9 +74,9 @@ function Apropos() {
 
         </div>
 
-        <div className="bulle"> 
+        <div className={AproposCSS.bulle}> 
 
-          <div className="button-Bulle" onClick = {()=>{
+          <div className={AproposCSS.buttonBulle} onClick = {()=>{
                     if(displtrois){
                         
                         setDispltrois(false)
@@ -99,9 +99,9 @@ function Apropos() {
 
         </div>
 
-        <div className="bulle"> 
+        <div className={AproposCSS.bulle}> 
 
-          <div className="button-Bulle" onClick = {()=>{
+          <div className={AproposCSS.buttonBulle} onClick = {()=>{
                     if(displquatre){
                         
                         setDisplquatre(false)
