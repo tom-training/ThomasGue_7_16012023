@@ -1,9 +1,10 @@
 import HomeCSS from '../../style/Home.module.css'
-import BannerImg from '../../assets/Banner.png'
+
 
 import { useState, useEffect } from 'react'
 
 import Appart from '../../components/Appart'
+import Banner from '../../components/Banner'
 
 function Home() {
 
@@ -32,10 +33,11 @@ function Home() {
     return (
       <div>
 
-        <div className='Banner'>
-            <img src={BannerImg} alt="Chez vous partout et ailleurs!" />
-        </div>  
-
+        <Banner 
+            
+            avec = {true}
+        
+        />
 
         <div>
           {isDataLoading ? (

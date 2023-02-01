@@ -5,7 +5,7 @@ import Home from './pages/Home'
 import Apropos from './pages/Apropos'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import Error from './components/Error'
+import Error from './pages/Error'
 import Card from './pages/Card'
 
 

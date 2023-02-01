@@ -11,6 +11,8 @@ import Respect from '../../components/Collapses/Respect'
 import Securite from '../../components/Collapses/Securite'
 import Service from '../../components/Collapses/Service'
 
+import Banner from '../../components/Banner'
+
 function Apropos() {
 
   const [displun, setDisplun] = useState(false)
@@ -20,107 +22,117 @@ function Apropos() {
 
     return (
 
-      <div className={AproposCSS.sectionCollapses}>
+      <div>
 
-        <div className={AproposCSS.bulle}> 
-
-          <div className={AproposCSS.buttonBulle} onClick = {()=>{
-                    if(displun){
-                        
-                        setDisplun(false)
-                       
-                    }else{
-                        
-                        setDisplun(true)
-                    }
-                }}> 
-            Fiabilité
-
-            {displun ? (<img src = {OpenVector} alt="vector icon open"/>):
+        <Banner 
             
-            (<img src = {Vector} alt="vector icon closed" />) 
-            }      
+            avec = {false}
+        
+        />
 
-          </div> 
+        <div className={AproposCSS.sectionCollapses}>
 
-          {displun ? (<Fiabilite />):(null) 
-          }
+          <div className={AproposCSS.bulle}> 
 
-        </div>
-
-        <div className={AproposCSS.bulle}> 
-
-          <div className={AproposCSS.buttonBulle} onClick = {()=>{
-                    if(displdeux){
+            <div className={AproposCSS.buttonBulle} onClick = {()=>{
+                      if(displun){
+                          
+                          setDisplun(false)
                         
-                        setDispldeux(false)
-                       
-                    }else{
-                        
-                        setDispldeux(true)
-                    }
-                }}> 
-            Respect
+                      }else{
+                          
+                          setDisplun(true)
+                      }
+                  }}> 
+              Fiabilité
 
-            {displdeux ? (<img src = {OpenVector} alt="vector icon open"/>):
-            
-            (<img src = {Vector} alt="vector icon closed" />) 
+              {displun ? (<img src = {OpenVector} alt="vector icon open"/>):
+              
+              (<img src = {Vector} alt="vector icon closed" />) 
+              }      
+
+            </div> 
+
+            {displun ? (<Fiabilite />):(null) 
             }
 
           </div>
 
-          {displdeux ? (<Respect />):(null) 
-          }
+          <div className={AproposCSS.bulle}> 
 
-        </div>
-
-        <div className={AproposCSS.bulle}> 
-
-          <div className={AproposCSS.buttonBulle} onClick = {()=>{
-                    if(displtrois){
+            <div className={AproposCSS.buttonBulle} onClick = {()=>{
+                      if(displdeux){
+                          
+                          setDispldeux(false)
                         
-                        setDispltrois(false)
-                       
-                    }else{
-                        
-                        setDispltrois(true)
-                    }
-                }}>
-            Service
+                      }else{
+                          
+                          setDispldeux(true)
+                      }
+                  }}> 
+              Respect
 
-            {displtrois ? (<img src = {OpenVector} alt="vector icon open"/>):
-            
-            (<img src = {Vector} alt="vector icon closed" />) 
-            }        
+              {displdeux ? (<img src = {OpenVector} alt="vector icon open"/>):
+              
+              (<img src = {Vector} alt="vector icon closed" />) 
+              }
+
+            </div>
+
+            {displdeux ? (<Respect />):(null) 
+            }
+
           </div>
 
-          {displtrois ? (<Service />):(null) 
-          }
+          <div className={AproposCSS.bulle}> 
 
-        </div>
-
-        <div className={AproposCSS.bulle}> 
-
-          <div className={AproposCSS.buttonBulle} onClick = {()=>{
-                    if(displquatre){
+            <div className={AproposCSS.buttonBulle} onClick = {()=>{
+                      if(displtrois){
+                          
+                          setDispltrois(false)
                         
-                        setDisplquatre(false)
-                       
-                    }else{
-                        
-                        setDisplquatre(true)
-                    }
-                }}>
-            Sécurité
+                      }else{
+                          
+                          setDispltrois(true)
+                      }
+                  }}>
+              Service
 
-            {displquatre ? (<img src = {OpenVector} alt="vector icon open"/>):
-            
-            (<img src = {Vector} alt="vector icon closed" />) 
-            }        
+              {displtrois ? (<img src = {OpenVector} alt="vector icon open"/>):
+              
+              (<img src = {Vector} alt="vector icon closed" />) 
+              }        
+            </div>
+
+            {displtrois ? (<Service />):(null) 
+            }
+
           </div>
 
-          {displquatre ? (<Securite />):(null) 
-          }
+          <div className={AproposCSS.bulle}> 
+
+            <div className={AproposCSS.buttonBulle} onClick = {()=>{
+                      if(displquatre){
+                          
+                          setDisplquatre(false)
+                        
+                      }else{
+                          
+                          setDisplquatre(true)
+                      }
+                  }}>
+              Sécurité
+
+              {displquatre ? (<img src = {OpenVector} alt="vector icon open"/>):
+              
+              (<img src = {Vector} alt="vector icon closed" />) 
+              }        
+            </div>
+
+            {displquatre ? (<Securite />):(null) 
+            }
+
+          </div>
 
         </div>
 
