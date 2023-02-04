@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom'
 import Vector from '../../assets/Vector.svg'
 import OpenVector from '../../assets/OpenVector.png'
@@ -52,7 +52,7 @@ function Card(){
 
                   <img src={logt.cover} alt="un appartement"className={CardCSS.coverStyle} />
 
-                    <div className={CardCSS.blocIntermediaire}>
+                    <div className={CardCSS.blocIntermediaire}> 
 
                       <div className={CardCSS.titleStyle}> {logt.title} </div>
 
@@ -74,12 +74,12 @@ function Card(){
                       
                         <div className={CardCSS.descDiv}> Description </div>
 
-                        <div className={CardCSS.blocIm}>
-                          {display? (<img src = {OpenVector} alt="vector icon open"/>):
+                        
+                          {display? (<img src = {OpenVector} alt="vector icon open" className={CardCSS.imaVector}/>):
               
                           (<img src = {Vector} alt="vector icon closed" className={CardCSS.imaVector}/>) 
                           } 
-                        </div>
+                       
                       </div>
 
                       {display ?(
@@ -96,12 +96,12 @@ function Card(){
                           }}> 
                           
                             <div className={CardCSS.descDiv}> Équipements </div>
-                            <div className={CardCSS.blocIm}>
-                              {displayDeux? (<img src = {OpenVector} alt="vector icon open"/>):
+                            
+                              {displayDeux? (<img src = {OpenVector} alt="vector icon open" className={CardCSS.imaVector}/>):
                   
                               (<img src = {Vector} alt="vector icon closed" className={CardCSS.imaVector}/>) 
                               } 
-                            </div>
+                            
                         </div>
 
                           {displayDeux ?(

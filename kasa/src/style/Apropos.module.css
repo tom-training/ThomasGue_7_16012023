@@ -4,23 +4,10 @@
     flex-direction: column;
     
     align-items: center;
+
+    border: 2px solid orange;
 }
 
 
-.bulle{
 
-    width: 1000px;
-    margin: 20px;
-}
 
-.buttonBulle{
-
-    width: 1000px;
-    padding: 5px;
-    background-color: #FF6060;
-    color: #FFFFFF;
-    border: none;
-    display: flex;
-    justify-content: space-between;
-    border-radius: 5px;
-}
