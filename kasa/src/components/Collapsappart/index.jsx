@@ -3,7 +3,7 @@ import { useState} from 'react'
 import Vector from '../../assets/Vector.svg'
 import OpenVector from '../../assets/OpenVector.png'
 
-import CollapsappartCSS from '../../style/Collapsappart.module.css'
+import CollapsappequiptCSS from '../../style/Collapsappequipt.module.css'
 
 function Collapsappart({descrip}){
 
@@ -12,24 +12,28 @@ function Collapsappart({descrip}){
 
     return(
 
-                <div className={CollapsappartCSS.lesSousBlocs}>
-                      <div className= {CollapsappartCSS.boutonPlusInfo} onClick={()=>{
+                <div className={`${CollapsappequiptCSS.lesSousBlocs} ${CollapsappequiptCSS.leSousBlocDesc}`}>
+                      <div className= {CollapsappequiptCSS.boutonPlusInfo} onClick={()=>{
                         if(display){setDisplay(false)}
                         else{setDisplay(true)}
                       }}> 
                       
-                            <div className={CollapsappartCSS.descDiv}> Description </div>
+                            <div className={CollapsappequiptCSS.descDiv}> Description </div>
 
                         
-                            {display? (<img src = {OpenVector} alt="vector icon open" className={CollapsappartCSS.imaVector}/>):
+                            {display? (<img src = {OpenVector} alt="vector icon open" className={CollapsappequiptCSS.imaVector}/>):
               
-                            (<img src = {Vector} alt="vector icon closed" className={CollapsappartCSS.imaVector}/>) 
+                            (<img src = {Vector} alt="vector icon closed" className={CollapsappequiptCSS.imaVector}/>) 
                             } 
                        
                       </div>
 
                       {display ?
-                        (<div className={CollapsappartCSS.textDisplayed}> {descrip} </div>)
+                        (<div className={CollapsappequiptCSS.textDisplayed}> 
+                          <div className={CollapsappequiptCSS.lineText}>
+                            {descrip} 
+                          </div>
+                        </div>)
                         :(null)
                       }
 
