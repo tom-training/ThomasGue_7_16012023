@@ -1,6 +1,9 @@
 import { useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom'
 
+import Arrowfd from '../../assets/arrowfd.svg'
+
+import Arrowbck from '../../assets/arrowbck.svg'
 
 import CardCSS from '../../style/Card.module.css'
 
@@ -19,7 +22,7 @@ function Card(){
 
     const url = '../liste.json'
 
-    
+    const [pos, setPos] = useState(0);
 
     useEffect(() => {
       
@@ -32,6 +35,7 @@ function Card(){
           {
           setAppartData(appartData)
           console.log(appartData)
+          
           setDataLoading(false)
           })
             
@@ -52,19 +56,40 @@ function Card(){
 
               <div key={logt.id} className={CardCSS.leCadre}>
 
-                  <img src={logt.cover} alt="un appartement"className={CardCSS.coverStyle} />
+                  <img src={logt.cover} alt="un appartement" className={CardCSS.coverStyle} />
 
-                    <div className={CardCSS.blocIntermediaire}> 
+                  <img src={Arrowbck} alt="previous flat" className={CardCSS.arrowStyle} 
 
-                      <div className={CardCSS.titleStyle}> {logt.title} </div>
+                      onClick = {()=>{
 
-                      <div className={CardCSS.locationStyle}> {logt.location} </div>
+                        (pos === 0)?(setPos(logt.pictures.length - 1)):
+                        setPos(pos-1)
+                      }}
+                  />
 
-                      <div className={CardCSS.lesTags}>
-                        {logt.tags.map((tago)=>(<div key={tago} className={CardCSS.leTag}> {tago} </div>))}
-                      </div>  
-                    
-                    </div>
+                  <img src={logt.pictures[pos]} alt="montre l'appart" className={CardCSS.coverStyle} />
+
+                  <img src={Arrowfd} alt="next flat" className={CardCSS.arrowStyle} 
+                  
+                      onClick = {()=>{
+
+                        (pos === logt.pictures.length - 1)?(setPos(0)):
+                        setPos(pos+1)
+                      }}
+                  
+                  />
+
+                  <div className={CardCSS.blocIntermediaire}> 
+
+                    <div className={CardCSS.titleStyle}> {logt.title} </div>
+
+                    <div className={CardCSS.locationStyle}> {logt.location} </div>
+
+                    <div className={CardCSS.lesTags}>
+                      {logt.tags.map((tago)=>(<div key={tago} className={CardCSS.leTag}> {tago} </div>))}
+                    </div>  
+                  
+                  </div>
 
                   <div className={CardCSS.lesDeuxBlocs}>
 

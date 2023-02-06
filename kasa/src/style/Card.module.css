@@ -26,6 +26,12 @@
     align-self: center;
 }
 
+.arrowStyle{
+    color: black;
+    border: 3px solid purple;
+    background-color: yellow;
+}
+
 .titleStyle{
 
     color: #FF6060;

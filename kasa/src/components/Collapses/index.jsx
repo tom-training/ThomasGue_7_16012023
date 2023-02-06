@@ -26,7 +26,7 @@ function Collapses({nom, definition}){
 
                             setDispl(true)
                             }
-                            }}
+                        }}
                     > 
                     {nom}
 
