@@ -1,9 +1,12 @@
 import { useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom'
-import Vector from '../../assets/Vector.svg'
-import OpenVector from '../../assets/OpenVector.png'
+
 
 import CardCSS from '../../style/Card.module.css'
+
+import Collapsappart from '../../components/Collapsappart'
+
+import Collapsequipt from '../../components/Collapsequipt'
 
 function Card(){
 
@@ -16,8 +19,7 @@ function Card(){
 
     const url = '../liste.json'
 
-    const [display, setDisplay] = useState(false)
-    const [displayDeux, setDisplayDeux] = useState(false)
+    
 
     useEffect(() => {
       
@@ -66,56 +68,10 @@ function Card(){
 
                   <div className={CardCSS.lesDeuxBlocs}>
 
-                    <div className={CardCSS.lesSousBlocs}>
-                      <div className= {CardCSS.boutonPlusInfo} onClick={()=>{
-                        if(display){setDisplay(false)}
-                        else{setDisplay(true)}
-                      }}> 
-                      
-                        <div className={CardCSS.descDiv}> Description </div>
+                    <Collapsappart descrip = {logt.description}/>
 
-                        
-                          {display? (<img src = {OpenVector} alt="vector icon open" className={CardCSS.imaVector}/>):
-              
-                          (<img src = {Vector} alt="vector icon closed" className={CardCSS.imaVector}/>) 
-                          } 
-                       
-                      </div>
+                    <Collapsequipt equipt = {logt.equipments}/>
 
-                      {display ?(
-                            <div className={CardCSS.textDisplayed}> {logt.description} </div>
-                          )
-                          :(null)}
-
-                    </div>        
-                    <div className={CardCSS.lesSousBlocs}>
-
-                        <div className= {CardCSS.boutonPlusInfo} onClick={()=>{
-                            if(displayDeux){setDisplayDeux(false)}
-                            else{setDisplayDeux(true)}
-                          }}> 
-                          
-                            <div className={CardCSS.descDiv}> Équipements </div>
-                            
-                              {displayDeux? (<img src = {OpenVector} alt="vector icon open" className={CardCSS.imaVector}/>):
-                  
-                              (<img src = {Vector} alt="vector icon closed" className={CardCSS.imaVector}/>) 
-                              } 
-                            
-                        </div>
-
-                          {displayDeux ?(
-                            <div className={CardCSS.textDisplayed}> {logt.equipments.map((eqpt, id)=>(
-
-                              <ul className={CardCSS.listDisplayed}>
-                                <li key={id}>{eqpt}</li>
-                              </ul>
-
-                            ))} </div>
-                          )
-                          :(null)}
-
-                    </div>      
                   </div>
               </div>  
               ):(null)  
