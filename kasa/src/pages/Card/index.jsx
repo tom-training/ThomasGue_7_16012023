@@ -7,15 +7,12 @@ import Arrowbck from '../../assets/arrowbck.svg'
 
 import CardCSS from '../../style/Card.module.css'
 
-import Collapsappart from '../../components/Collapsappart'
-
-import Collapsequipt from '../../components/Collapsequipt'
+import Collapse from '../../components/Collapse'
 
 function Card(){
 
     const appartId = useParams()
     const [appartData, setAppartData] = useState([])
-    
     console.log(appartId)
 
     const [isDataLoading, setDataLoading] = useState(false)
@@ -35,12 +32,14 @@ function Card(){
           {
           setAppartData(appartData)
           console.log(appartData)
-          
           setDataLoading(false)
           })
             
         .catch((error)=> console.log(error))
     }, [])
+
+    console.log(appartData)
+    
       
     return(
 
@@ -55,8 +54,6 @@ function Card(){
               logt.id === appartId.id ?(
 
               <div key={logt.id} className={CardCSS.leCadre}>
-
-                  <img src={logt.cover} alt="un appartement" className={CardCSS.coverStyle} />
 
                   <img src={Arrowbck} alt="previous flat" className={CardCSS.arrowStyle} 
 
@@ -92,14 +89,19 @@ function Card(){
                   </div>
 
                   <div className={CardCSS.lesDeuxBlocs}>
+                    
+                      <Collapse nom = "Description" descrip = {logt.description}/>
+                    
 
-                    <Collapsappart descrip = {logt.description}/>
+                    
+                      <Collapse nom = "Équipements" descrip = {logt.equipments.map((eqt)=>(
 
-                    <Collapsequipt equipt = {logt.equipments}/>
-
+                        <p> {eqt} </p>
+                      ))}/>
+                    
                   </div>
               </div>  
-              ):(null)  
+              ):(<p> 404</p>)  
               
 
               ))}</div>)}

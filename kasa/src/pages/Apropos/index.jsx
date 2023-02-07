@@ -1,6 +1,6 @@
 import AproposCSS from '../../style/Apropos.module.css'
 import Banner from '../../components/Banner'
-import Collapses from '../../components/Collapses'
+import Collapse from '../../components/Collapse'
 
 import { propList } from '../../data/propList'
 
@@ -24,12 +24,15 @@ function Apropos() {
 
               {propList.map((propri)=>(
 
-                    <Collapses key={propri.id} 
+
+                  <div className={AproposCSS.lesBlocs}>
+                    <Collapse key={propri.id} 
                     
                         nom = {propri.nom}
-                        definition = {propri.definition}
+                        descrip = {propri.definition}
                     
-                    /> 
+                    />
+                  </div>   
               ))}
         </div>
 

@@ -1,22 +1,19 @@
 
 .lesSousBlocs{
     flex: 1;
-    width: 45%;
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100%;
+    width: 100%;
+    
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-bottom: 5%;
+    border: 4px solid yellow;
 }
 
-.leSousBlocDesc{
-    margin-right: 2%;
-}
 
-.leSousBlocEquipt{
-    margin-left: 2%;
-}
+
 
 
 
@@ -38,26 +35,17 @@
     padding: 3%;
 } 
 
-
-
 .textDisplayed{
     background-color: #F7F7F7;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     width: 100%;
     height: 100%; 
-    color: #FF6060;;   
-}
-
-
-.listDisplayed{
-    list-style: none;
-}
-
-.listItem{
-    line-height: 40%;
+    color: #FF6060; 
+    border: 4px dashed green;
 }
 
 .lineText{
     margin: 3%;
+    border: 2px solid pink;
 }
