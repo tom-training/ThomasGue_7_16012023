@@ -1,5 +1,5 @@
 import { useState, useEffect} from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 
 import Arrowfd from '../../assets/arrowfd.svg'
 
@@ -11,10 +11,19 @@ import Collapse from '../../components/Collapse'
 
 function Card(){
 
-    const appartId = useParams()
+    const appartId  = useParams()
     const [appartData, setAppartData] = useState([])
+    const [pictures, setPictures] = useState([])
+    const [equipments, setEquipments] = useState([])
+    const [host, setHost] = useState([])
+    const [tagos, setTagos] = useState([])
+    
+    //const navigate = useNavigate();
+    
     console.log(appartId)
 
+   
+    
     const [isDataLoading, setDataLoading] = useState(false)
 
     const url = '../liste.json'
@@ -23,88 +32,113 @@ function Card(){
 
     useEffect(() => {
       
-      setDataLoading(true)
-      fetch(url)
-        .then((response) => response.json())
-  
-        .then((appartData) => 
-          
-          {
-          setAppartData(appartData)
-          console.log(appartData)
-          setDataLoading(false)
-          })
-            
-        .catch((error)=> console.log(error))
-    }, [])
+         
+      async function fetchSurvey(){
+        setDataLoading(true)
+        try{
+          const response = await fetch(url)
+          const allAppart  = await response.json()
+          console.log(allAppart) 
+          const singleAppart = allAppart.find((apt)=> apt.id === appartId.id)
+          console.log(singleAppart)
+          setAppartData(singleAppart)
+          setPictures(singleAppart.pictures)
+          setEquipments(singleAppart.equipments)
+          setHost(singleAppart.host)
+          setTagos(singleAppart.tags)
 
-    console.log(appartData)
+          
+        }
+        catch(err){
+          console.log(err)
+
+        }
+        finally{
+
+          setDataLoading(false)
+        }
+
+      }
+      fetchSurvey()
+
+       
+    }, [appartId.id])
+
     
-      
+    console.log(appartData)
+    console.log(appartData.id)
+    console.log(appartData.title)
+    console.log(appartData.equipments)
+    console.log(appartData.pictures)
+    console.log(appartData.host)
+   
+
     return(
 
       <div>
         
         <div>
-            {isDataLoading ?(<div> Ca charge </div>):
+
+            {isDataLoading ?(<div> Veuillez patienter pendant le chargement de la page </div>):
             
-            (<div> {appartData.map((logt)=>(
+             
 
+            ( <div key={appartData.id} className={CardCSS.leCadre}>
 
-              logt.id === appartId.id ?(
+                  <div className={CardCSS.leCadrePhoto}> 
+                    <img src={Arrowbck} alt="previous flat" className={CardCSS.arrowleftStyle} 
 
-              <div key={logt.id} className={CardCSS.leCadre}>
+                        onClick = {()=>{
 
-                  <img src={Arrowbck} alt="previous flat" className={CardCSS.arrowStyle} 
+                          (pos === 0)?(setPos(pictures.length - 1)):
+                          setPos(pos-1)
+                        }}
+                    />
+                        
+                    <img src={pictures[pos]} alt="montre l'appart" className={CardCSS.photoStyle} />
+                      
+                    <img src={Arrowfd} alt="next flat" className={CardCSS.arrowrightStyle} 
+                    
+                        onClick = {()=>{
 
-                      onClick = {()=>{
-
-                        (pos === 0)?(setPos(logt.pictures.length - 1)):
-                        setPos(pos-1)
-                      }}
-                  />
-
-                  <img src={logt.pictures[pos]} alt="montre l'appart" className={CardCSS.coverStyle} />
-
-                  <img src={Arrowfd} alt="next flat" className={CardCSS.arrowStyle} 
+                          (pos === pictures.length - 1)?(setPos(0)):
+                          setPos(pos+1)
+                        }}
+                    
+                    /> 
+                  </div>
                   
-                      onClick = {()=>{
-
-                        (pos === logt.pictures.length - 1)?(setPos(0)):
-                        setPos(pos+1)
-                      }}
-                  
-                  />
-
                   <div className={CardCSS.blocIntermediaire}> 
 
-                    <div className={CardCSS.titleStyle}> {logt.title} </div>
+                    <div className={CardCSS.titleStyle}> {appartData.title} </div>
 
-                    <div className={CardCSS.locationStyle}> {logt.location} </div>
-
+                    <div className={CardCSS.locationStyle}> {appartData.location} </div>
+                                     
                     <div className={CardCSS.lesTags}>
-                      {logt.tags.map((tago)=>(<div key={tago} className={CardCSS.leTag}> {tago} </div>))}
+                      {tagos.map((tago)=>(<div key={tago} className={CardCSS.leTag}> {tago} </div>))}
                     </div>  
                   
                   </div>
 
                   <div className={CardCSS.lesDeuxBlocs}>
                     
-                      <Collapse nom = "Description" descrip = {logt.description}/>
+                      <Collapse key={`${appartData.index} description`} nom = "Description" descrip = {appartData.description}/>
                     
 
-                    
-                      <Collapse nom = "Équipements" descrip = {logt.equipments.map((eqt)=>(
+                      
+                      <Collapse key={`${appartData.index} Equipements`} nom = "Équipements" descrip = {equipments.map((eqt)=>(
 
                         <p> {eqt} </p>
                       ))}/>
+                      
+                    
                     
                   </div>
-              </div>  
-              ):(<p> 404</p>)  
-              
+              </div> 
 
-              ))}</div>)}
+            )
+            }
+                       
         </div>
         
       </div>

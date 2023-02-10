@@ -1,1 +1,7 @@
 /* Feuille de style pour le css qui est général et non spécifique à un module */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}

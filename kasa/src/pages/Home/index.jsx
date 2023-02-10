@@ -50,7 +50,7 @@ function Home() {
                 appartData.map((logement) => (
 
                   <Appart
-
+                    key = {logement.id}
                     id = {logement.id}
                     titre = {logement.title}
                   

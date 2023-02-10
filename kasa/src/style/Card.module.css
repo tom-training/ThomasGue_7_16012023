@@ -3,7 +3,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-}    
+    
+} 
+
+.leCadrePhoto{
+    
+    width: 90%;
+    height: 415px;
+    border: 2px solid brown;
+    position: relative;
+}
+
+
 
 .lesTags{
 
@@ -20,16 +31,45 @@
     color: white;
 }
 
-.coverStyle{
-
-    width: 80%;
-    align-self: center;
+.photoStyle{
+    
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    /*border: 4px solid green; */
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+    
 }
 
-.arrowStyle{
+.arrowleftStyle{
     color: black;
     border: 3px solid purple;
     background-color: yellow;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-50%);
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+}
+
+.arrowrightStyle{
+    color: black;
+    border: 3px solid purple;
+    background-color: yellow;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+   
 }
 
 .titleStyle{
@@ -49,7 +89,7 @@
     align-items: flex-start;
 
     width: 80%;
-    margin: 5px;
+    /*margin: 5px; */
 }
 
 .lesDeuxBlocs{

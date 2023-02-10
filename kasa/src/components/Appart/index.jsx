@@ -28,7 +28,7 @@ function Appart({titre, id}){
 
     return(
 
-            <AppartLink to ={"/card/" + id} key={id}>
+            <AppartLink to ={"/card/" + id}>
                 {titre} 
             </AppartLink>        
 
