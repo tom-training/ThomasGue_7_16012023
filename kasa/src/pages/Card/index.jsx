@@ -1,6 +1,8 @@
 import { useState, useEffect} from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-
+import StarImg from '../../assets/star.svg'
+import GreyStarImg from '../../assets/GreyStar.svg'
+import Header from '../../components/Header'
 import Arrowfd from '../../assets/arrowfd.svg'
 
 import Arrowbck from '../../assets/arrowbck.svg'
@@ -8,6 +10,8 @@ import Arrowbck from '../../assets/arrowbck.svg'
 import CardCSS from '../../style/Card.module.css'
 
 import Collapse from '../../components/Collapse'
+
+import Loader from '../../components/Loader'
 
 function Card(){
 
@@ -17,8 +21,9 @@ function Card(){
     const [equipments, setEquipments] = useState([])
     const [host, setHost] = useState([])
     const [tagos, setTagos] = useState([])
+    const [rating, setRating] = useState([])
     
-    //const navigate = useNavigate();
+    const navigate = useNavigate();
     
     console.log(appartId)
 
@@ -40,12 +45,14 @@ function Card(){
           const allAppart  = await response.json()
           console.log(allAppart) 
           const singleAppart = allAppart.find((apt)=> apt.id === appartId.id)
+          if(!singleAppart) navigate("/*")
           console.log(singleAppart)
           setAppartData(singleAppart)
           setPictures(singleAppart.pictures)
           setEquipments(singleAppart.equipments)
           setHost(singleAppart.host)
           setTagos(singleAppart.tags)
+          setRating(parseInt(singleAppart.rating))
 
           
         }
@@ -72,17 +79,18 @@ function Card(){
     console.log(appartData.pictures)
     console.log(appartData.host)
    
+    const range = [1, 2, 3, 4, 5]
 
     return(
 
       <div>
+
+        <Header accueil={false} aprop={false}/>
         
         <div>
 
-            {isDataLoading ?(<div> Veuillez patienter pendant le chargement de la page </div>):
+            {isDataLoading ?(<Loader />):
             
-             
-
             ( <div key={appartData.id} className={CardCSS.leCadre}>
 
                   <div className={CardCSS.leCadrePhoto}> 
@@ -94,6 +102,8 @@ function Card(){
                           setPos(pos-1)
                         }}
                     />
+
+                    <p className={CardCSS.chiffragePhoto}> {pos + 1}/{pictures.length} </p>
                         
                     <img src={pictures[pos]} alt="montre l'appart" className={CardCSS.photoStyle} />
                       
@@ -109,15 +119,45 @@ function Card(){
                   </div>
                   
                   <div className={CardCSS.blocIntermediaire}> 
+                       
+                    <div className={CardCSS.titleLocTago}>  
 
-                    <div className={CardCSS.titleStyle}> {appartData.title} </div>
+                      <h1 className={CardCSS.titleStyle}> {appartData.title} </h1> 
 
-                    <div className={CardCSS.locationStyle}> {appartData.location} </div>
-                                     
-                    <div className={CardCSS.lesTags}>
-                      {tagos.map((tago)=>(<div key={tago} className={CardCSS.leTag}> {tago} </div>))}
-                    </div>  
-                  
+                      <div className={CardCSS.locationStyle}> {appartData.location} </div>
+
+                      <div className={CardCSS.lesTags}>
+                        {tagos.map((tago)=>(<div key={tago} className={CardCSS.leTag}> {tago} </div>))}
+                      </div>
+
+                    </div>
+
+                    <div className={CardCSS.propLeRating}>    
+
+                      <div className={CardCSS.propStyle}> 
+                        
+                        <div className={CardCSS.propName}> {host.name} </div>
+                        <img src={host.picture} alt="le propriétaire" className={CardCSS.propPix} />
+                      
+                      </div>
+
+                      <div className={CardCSS.leRating}>
+                        {range.map((count)=>(
+                          rating >= count?(
+                            <img src={StarImg} alt="star de rating" />
+                          ):(null)
+                        ))}
+
+                        {range.map((count)=>(
+                          count > rating && count < 6 ?(
+                            <img src={GreyStarImg} alt="star de rating" />
+                          ):(null)
+                        ))}
+
+
+                      </div>  
+                    </div>    
+                 
                   </div>
 
                   <div className={CardCSS.lesDeuxBlocs}>
@@ -130,9 +170,7 @@ function Card(){
 
                         <p> {eqt} </p>
                       ))}/>
-                      
-                    
-                    
+                        
                   </div>
               </div> 
 

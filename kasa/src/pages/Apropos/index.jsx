@@ -1,7 +1,7 @@
 import AproposCSS from '../../style/Apropos.module.css'
 import Banner from '../../components/Banner'
 import Collapse from '../../components/Collapse'
-
+import Header from '../../components/Header'
 import { propList } from '../../data/propList'
 
 function Apropos() {
@@ -13,6 +13,8 @@ function Apropos() {
     return (
 
       <div>
+
+        <Header accueil={false} aprop ={true}/>
 
         <Banner 
             

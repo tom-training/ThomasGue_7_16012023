@@ -1,6 +1,6 @@
 import HomeCSS from '../../style/Home.module.css'
-
-
+import Header from '../../components/Header'
+import Loader from '../../components/Loader'
 import { useState, useEffect } from 'react'
 
 import Appart from '../../components/Appart'
@@ -33,6 +33,8 @@ function Home() {
     return (
       <div>
 
+        <Header accueil={true} aprop={false}/>
+
         <Banner 
             
             avec = {true}
@@ -41,7 +43,7 @@ function Home() {
 
         <div>
           {isDataLoading ? (
-            <div> Ca load </div>
+            <Loader/>
           ) : (
             <div className={HomeCSS.homeStyle}> 
               
@@ -53,6 +55,7 @@ function Home() {
                     key = {logement.id}
                     id = {logement.id}
                     titre = {logement.title}
+                    cover = {logement.cover}
                   
                   />  
                 ))

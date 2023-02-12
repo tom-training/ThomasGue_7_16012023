@@ -1,35 +1,52 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import Logo from '../../assets/LOGO.png'
+import HeaderCSS from '../../style/Header.module.css'
 
-const NavContainer = styled.nav`
-  padding: 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
+const StyledLink = styled(Link)`
+  text-decoration: ${(props)=>props.surlignage};
+`
+
+function Header(props) {
   
-  color: #FF6060;
-`
-
-const NavLink = styled(Link)`
-color: #FF6060;
-margin-left: 10px;
-
-`
-
-function Header() {
+  const accueil = props.accueil
+  const aprop = props.aprop
+  
   return (
-    <NavContainer>
+    <nav>
 
       <Link to="/">
         <img alt="logo de kasa" src={Logo} />
       </Link>
 
       <div>
-        <NavLink to="/">Accueil</NavLink>
-        <NavLink to="/a_propos"> A propos </NavLink> 
-      </div>
-    </NavContainer>
+
+        {accueil ?(
+          
+          <StyledLink to="/" className={HeaderCSS.lien} surlignage={"underline"}>Accueil</StyledLink>
+        
+        ):(
+          
+          <StyledLink to="/" className={HeaderCSS.lien} surlignage={"none"}>Accueil</StyledLink>
+          
+        )        
+        } 
+
+        {aprop ?(
+          
+          <StyledLink to="/a_propos" className={HeaderCSS.lien} surlignage={"underline"}>A propos</StyledLink>
+          
+        ):(
+          
+          <StyledLink to="/a_propos" className={HeaderCSS.lien} surlignage={"none"}>A propos</StyledLink>
+          
+        )        
+        } 
+
+      </div>  
+        
+    </nav>
   )
 }
 
