@@ -1,11 +1,23 @@
-.homeStyle{
-    
-    
+@media (max-width: 575.98px){
+    .homeStyle{
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
 }
+
+@media (min-width: 575.99px){
+
+    .homeStyle{
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
 
 
 

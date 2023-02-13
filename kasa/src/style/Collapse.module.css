@@ -1,4 +1,47 @@
+@media (max-width: 575.98px){
 
+    .lesSousBlocs{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100%;
+        width: 100%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-bottom: 5%;
+    }
+    
+    .boutonPlusInfo{
+    
+        background-color: #FF6060;
+        color: white;
+        width: 100%;
+        height: 52px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 10px;
+         
+    }
+    
+    .descDiv{
+        padding: 3%;
+    } 
+    
+    .textDisplayed{
+        background-color: #F6F6F6;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        width: 100%;
+        height: 100%; 
+        color: #FF6060; 
+        
+    }
+    
+    .lineText{
+        margin: 3%;
+    }
+}
 .lesSousBlocs{
     flex: 1;
     display: flex;
@@ -9,10 +52,6 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-bottom: 5%;
 }
-
-
-
-
 
 .boutonPlusInfo{
 
@@ -26,7 +65,6 @@
     border-radius: 10px;
      
 }
-
 
 .descDiv{
     padding: 3%;
@@ -44,4 +82,48 @@
 
 .lineText{
     margin: 3%;
+}
+
+@media (min-width: 575.99px){
+    .lesSousBlocs{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100%;
+        width: 100%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-bottom: 5%;
+    }
+    
+    .boutonPlusInfo{
+    
+        background-color: #FF6060;
+        color: white;
+        width: 100%;
+        height: 52px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 10px;
+         
+    }
+    
+    .descDiv{
+        padding: 3%;
+    } 
+    
+    .textDisplayed{
+        background-color: #F6F6F6;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        width: 100%;
+        height: 100%; 
+        color: #FF6060; 
+        
+    }
+    
+    .lineText{
+        margin: 3%;
+    }
 }

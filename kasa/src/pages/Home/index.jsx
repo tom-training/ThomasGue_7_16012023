@@ -66,13 +66,6 @@ function Home() {
           )}
         </div>
 
-
-        
-
-        
-
-
-      
       </div>
     )
   }

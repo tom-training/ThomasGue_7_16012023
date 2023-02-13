@@ -5,11 +5,7 @@ import Header from '../../components/Header'
 import { propList } from '../../data/propList'
 
 function Apropos() {
-
   
-
-
-
     return (
 
       <div>

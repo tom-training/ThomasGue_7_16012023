@@ -1,16 +1,41 @@
-.sectionCollapses{
+@media (max-width: 575.98px) {
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    .sectionCollapses{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .lesBlocs{
+    
+        width: 80%;
+        margin: 0;
+        padding: 0;
+    }
 }
 
-.lesBlocs{
+@media (min-width: 575.99px){
 
-    width: 80%;
-    margin: 0;
-    padding: 0;
+    .sectionCollapses{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .lesBlocs{
+    
+        width: 80%;
+        margin: 0;
+        padding: 0;
+    }
+
+
 }
+
+
+
 
 
 

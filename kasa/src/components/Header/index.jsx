@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import Logo from '../../assets/LOGO.png'
+import Logo from '../../assets/LOGO.svg'
 import HeaderCSS from '../../style/Header.module.css'
 
 
@@ -17,10 +17,10 @@ function Header(props) {
     <nav>
 
       <Link to="/">
-        <img alt="logo de kasa" src={Logo} />
+        <img alt="logo de kasa" src={Logo} className={HeaderCSS.logo} />
       </Link>
 
-      <div>
+      <div className={HeaderCSS.lesLiens}>
 
         {accueil ?(
           
