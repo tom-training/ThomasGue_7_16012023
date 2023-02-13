@@ -1,0 +1,19 @@
+@media (max-width: 575.98px){
+
+    .cadreBanner{
+
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        
+    }
+    
+    .imgBanner{
+    
+        margin: 0;
+        width: 340px;
+        object-fit: cover;
+    }
+}

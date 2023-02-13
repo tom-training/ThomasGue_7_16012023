@@ -13,9 +13,10 @@
         color: white;
     }
     
-    img{
+    .imgFooter{
     
         margin: 10px;
+        max-width: 200px; 
     }
 }
 

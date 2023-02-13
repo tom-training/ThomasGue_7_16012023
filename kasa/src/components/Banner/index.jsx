@@ -1,5 +1,7 @@
 import BannerImgSlogan from '../../assets/BannerSlogan.png'
 import BannerImg from '../../assets/Banner.png'
+import BannerCSS from '../../style/Banner.module.css'
+
 
 import PropTypes from 'prop-types'
 
@@ -9,12 +11,12 @@ function Banner(props){
 
     return(
 
-            <div>
+            <div className = {BannerCSS.cadreBanner}>
 
-                <div>{avec && <img src={BannerImgSlogan} alt="Chez vous partout et ailleurs!" />}</div> 
+                <div>{avec && <img src={BannerImgSlogan} alt="Chez vous partout et ailleurs!" className={BannerCSS.imgBanner} />}</div> 
         
             
-                <div>{avec === false && <img src={BannerImg} alt="Chez vous partout et ailleurs!" />}</div> 
+                <div>{avec === false && <img src={BannerImg} alt="Chez vous partout et ailleurs!" className={BannerCSS.imgBanner} />}</div> 
 
 
             </div>

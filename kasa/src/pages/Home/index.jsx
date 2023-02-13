@@ -31,7 +31,7 @@ function Home() {
     }, [])
 
     return (
-      <div>
+      <div className={HomeCSS.homeCadre}>
 
         <Header accueil={true} aprop={false}/>
 

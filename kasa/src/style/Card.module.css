@@ -5,7 +5,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        
     } 
     
     .leCadrePhoto{
@@ -28,15 +27,13 @@
         object-fit: cover;
         margin: 0;
         padding: 0;
-        border-radius: 25px;
-        
+        border-radius: 25px;    
     }
     
     .arrowleftStyle{
         position: absolute;
         left: 0;
         top: 40%;
-        
         z-index: 1;
         margin: 0;
         padding: 0;
@@ -48,8 +45,7 @@
         top: 40%;
         z-index: 1;
         margin: 0;
-        padding: 0;
-       
+        padding: 0;       
     }
     
     .chiffragePhoto{
@@ -62,16 +58,29 @@
     
     .blocIntermediaire{
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
         align-items: center;
         width: 90%;
-        margin-bottom: 1%;
+        margin-bottom: 5%;
+
+        
     }
     
     .titleLocTago{
         height: 100%;
     }
     
+    .propLeRating{
+        margin-top: 5%;
+        margin-bottom: 5%;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        
+        width: 100%;
+    }
+
     .titleStyle{
     
         color: #FF6060;
@@ -108,7 +117,9 @@
         color: #FF6060;
         display: flex;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: space-between;
+        
+        width: 35%;
         
     }
     
@@ -120,24 +131,28 @@
     .propPix{
         border-radius: 50%;
         background-color: #C4C4C4;
-        width: 64px;
-        height: 64px;
+        width: 40px;
+        height: 40px;
     
     }
     
     .leRating{
         display: flex;
         justify-items: center;
+        
+        margin: 0;
     }
     
     
     .lesDeuxBlocs{
     
         display: flex;
-        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
         flex-wrap: wrap;
         gap: 20px;
         width: 90%;
+
     }
 }
 

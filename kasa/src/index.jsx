@@ -6,6 +6,7 @@ import Apropos from './pages/Apropos'
 import Footer from './components/Footer'
 import Error from './pages/Error'
 import Card from './pages/Card'
+import './index.css';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

@@ -10,7 +10,7 @@ function Footer() {
 
       <img alt="logo de kasa" src={LogoFooter} className={FooterCSS.img} />
 
-      <img alt="all right reserved" src={Copyright} />
+      <img alt="all right reserved" src={Copyright} className={FooterCSS.imgFooter} />
 
     </footer>
 
