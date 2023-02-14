@@ -42,6 +42,18 @@
         justify-content: space-between;
         align-items: center;
         color: #FF6060;
+
+        
+    }
+
+    .lesLiens{
+
+        
+        display: flex;
+        justify-content: space-between;
+        padding: 0 2% 0 2%;
+        width: 25%;
+        
     }
       
     
@@ -49,6 +61,7 @@
     
         color: #FF6060;
         margin-left: 10px;
+
     }
 }
 

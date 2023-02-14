@@ -13,21 +13,21 @@ function Banner(props){
 
             <div className = {BannerCSS.cadreBanner}>
 
-                <div className ={BannerCSS.sCadreBanner}>
+                
                     
-                    {avec && 
+                {avec && 
+                
+                <div className={BannerCSS.ssCadreBanner}>
+                    <img src={BannerImgSlogan} alt="Chez vous partout et ailleurs!" className={BannerCSS.imgBanner} />
                     
-                    <div className={BannerCSS.ssCadreBanner}>
-                        <img src={BannerImgSlogan} alt="Chez vous partout et ailleurs!" className={BannerCSS.imgBanner} />
-                        
-                        <p className={BannerCSS.imgTexte}>Chez vous, partout et ailleurs</p>
-                    </div>    
-                    }
-                        
-                </div> 
-        
+                    <p className={BannerCSS.imgTexte}>Chez vous, partout et ailleurs</p>
+                </div>    
+                }
+                    
             
-                <div>{avec === false && <img src={BannerImg} alt="Chez vous partout et ailleurs!" className={BannerCSS.imgBanner} />}</div> 
+    
+        
+                {avec === false && <img src={BannerImg} alt="Chez vous partout et ailleurs!" className={BannerCSS.imgBanner} />} 
 
 
             </div>

@@ -37,7 +37,7 @@
 
     .cadreBanner{
 
-        margin: 0 0 0 0;
+        margin: 0;
         padding: 0;
         
         width: 100%;
@@ -46,14 +46,7 @@
         
     }
 
-    .sCadreBanner{
-
-        width: 1240px;
-        height: 223px;
-        margin: 0;
-        padding: 0;
-    }
-
+    /* Uniquement sur la page home, cette classe et la div correspondante absente sur A propos */
     .ssCadreBanner{
         width: 100%;
         height: 100%;
@@ -62,8 +55,10 @@
         position: relative;
         display: flex;
         justify-content: center;
+
     }
-    
+
+       
     .imgBanner{
     
         margin: 0;
