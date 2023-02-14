@@ -45,7 +45,7 @@ function Card(){
           const allAppart  = await response.json()
           console.log(allAppart) 
           const singleAppart = allAppart.find((apt)=> apt.id === appartId.id)
-          if(!singleAppart) navigate("/*")
+          if(!singleAppart) navigate("/error")
           console.log(singleAppart)
           setAppartData(singleAppart)
           setPictures(singleAppart.pictures)
@@ -69,7 +69,7 @@ function Card(){
       fetchSurvey()
 
        
-    }, [appartId.id])
+    }, [appartId.id, navigate])
 
     
     console.log(appartData)
@@ -83,7 +83,7 @@ function Card(){
 
     return(
 
-      <div>
+      <div className={CardCSS.cardCadre}>
 
         <Header accueil={false} aprop={false}/>
         

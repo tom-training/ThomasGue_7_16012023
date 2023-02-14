@@ -41,7 +41,8 @@ function Home() {
         
         />
 
-        <div>
+        <div className={HomeCSS.sHomeCadre}>
+          
           {isDataLoading ? (
             <Loader/>
           ) : (

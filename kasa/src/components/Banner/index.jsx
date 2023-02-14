@@ -1,4 +1,4 @@
-import BannerImgSlogan from '../../assets/BannerSlogan.png'
+import BannerImgSlogan from '../../assets/BannerSloganMob.svg'
 import BannerImg from '../../assets/Banner.png'
 import BannerCSS from '../../style/Banner.module.css'
 
@@ -13,7 +13,18 @@ function Banner(props){
 
             <div className = {BannerCSS.cadreBanner}>
 
-                <div>{avec && <img src={BannerImgSlogan} alt="Chez vous partout et ailleurs!" className={BannerCSS.imgBanner} />}</div> 
+                <div className ={BannerCSS.sCadreBanner}>
+                    
+                    {avec && 
+                    
+                    <div className={BannerCSS.ssCadreBanner}>
+                        <img src={BannerImgSlogan} alt="Chez vous partout et ailleurs!" className={BannerCSS.imgBanner} />
+                        
+                        <p className={BannerCSS.imgTexte}>Chez vous, partout et ailleurs</p>
+                    </div>    
+                    }
+                        
+                </div> 
         
             
                 <div>{avec === false && <img src={BannerImg} alt="Chez vous partout et ailleurs!" className={BannerCSS.imgBanner} />}</div> 

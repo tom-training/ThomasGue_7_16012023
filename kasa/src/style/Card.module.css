@@ -1,5 +1,11 @@
 @media (max-width: 575.98px) {
 
+    .cardCadre{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .leCadre{
 
         display: flex;
@@ -9,9 +15,10 @@
     
     .leCadrePhoto{
         
-        width: 90%;
+        width: 340px;
         height: 415px;
         position: relative;
+        
     }
     
     

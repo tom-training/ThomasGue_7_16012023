@@ -8,7 +8,7 @@ function Apropos() {
   
     return (
 
-      <div>
+      <div className={AproposCSS.cadreApropos}>
 
         <Header accueil={false} aprop ={true}/>
 
