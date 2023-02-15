@@ -60,21 +60,21 @@
         position: absolute;
         bottom: 0;
         left: 50%;
+        margin-bottom: 3%;
         z-index: 1;
     }
     
     .blocIntermediaire{
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         width: 90%;
-        margin-bottom: 5%;
-
-        
+        margin-bottom: 5%; 
     }
     
     .titleLocTago{
         height: 100%;
+        margin-top: 3%;
     }
     
     .propLeRating{
@@ -84,36 +84,38 @@
         flex-direction: row-reverse;
         justify-content: space-between;
         align-items: center;
-        
         width: 100%;
     }
 
     .titleStyle{
     
         color: #FF6060;
-        margin-bottom: 1%;
-        text-shadow: 0 2px 2px #C4C4C4;
+        margin-bottom: 3%;
+        /*text-shadow: 0 2px 2px #C4C4C4; */ 
+        font-size: 1.2em;
     }
     
     .locationStyle{
     
         color: #FF6060;
-        text-shadow: 0 2px 2px #C4C4C4;
-        margin-bottom: 1%;
+        /* text-shadow: 0 2px 2px #C4C4C4; */
+        margin-bottom: 3%; 
     }
     
     .lesTags{
     
         display: flex;
         justify-content: flex-start;
+        flex-wrap: wrap;
         padding: 0;
         margin: 0;
+        font-size: 0.9em;
     }
     
     .leTag{
     
-        margin-right: 5px;
-        padding: 5px;
+        margin: 0 5px 5px 0;
+        padding: 1px 10px 1px 10px;
         background-color: #FF6060;
         border-radius: 10px;
         color: white;
@@ -124,30 +126,34 @@
         color: #FF6060;
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        
-        width: 35%;
-        
+        justify-content: flex-end;
+        width: 50%;       
     }
     
     .propName{
         max-width: 40px;
         text-align: right;
+        font-size: 1em; 
+        margin-right: 10px;
+        display: flex;
+        justify-content: flex-end;     
     }
     
     .propPix{
         border-radius: 50%;
         background-color: #C4C4C4;
         width: 40px;
-        height: 40px;
-    
+        height: 40px;   
     }
     
     .leRating{
         display: flex;
         justify-items: center;
-        
         margin: 0;
+    }
+
+    .starImg{
+        width: 20px;
     }
     
     
@@ -159,7 +165,6 @@
         flex-wrap: wrap;
         gap: 20px;
         width: 90%;
-
     }
 }
 

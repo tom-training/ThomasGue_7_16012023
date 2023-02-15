@@ -144,13 +144,13 @@ function Card(){
                       <div className={CardCSS.leRating}>
                         {range.map((count)=>(
                           rating >= count?(
-                            <img src={StarImg} alt="star de rating" />
+                            <img src={StarImg} alt="star de rating" className={CardCSS.starImg} />
                           ):(null)
                         ))}
 
                         {range.map((count)=>(
                           count > rating && count < 6 ?(
-                            <img src={GreyStarImg} alt="star de rating" />
+                            <img src={GreyStarImg} alt="star de rating" className={CardCSS.starImg} />
                           ):(null)
                         ))}
 
