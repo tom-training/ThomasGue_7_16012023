@@ -228,6 +228,7 @@
         position: absolute;
         bottom: 0;
         left: 50%;
+        margin-bottom: 3%;
         z-index: 1;
     }
 
@@ -236,7 +237,7 @@
         justify-content: space-between;
         align-items: center;
         width: 90%;
-        margin-bottom: 1%;
+        margin-bottom: 2%;
     }
 
     .titleLocTago{
@@ -246,15 +247,16 @@
     .titleStyle{
 
         color: #FF6060;
-        margin-bottom: 1%;
-        text-shadow: 0 2px 2px #C4C4C4;
+        margin: 2% 0 2% 0;
+        /* text-shadow: 0 2px 2px #C4C4C4; */
+        font-size: 2em;
     }
 
     .locationStyle{
 
         color: #FF6060;
-        text-shadow: 0 2px 2px #C4C4C4;
-        margin-bottom: 1%;
+        /* text-shadow: 0 2px 2px #C4C4C4; */
+        margin-bottom: 2%;
     }
 
     .lesTags{
@@ -267,8 +269,10 @@
 
     .leTag{
 
+        display: flex;
+        align-items: center;
         margin-right: 5px;
-        padding: 5px;
+        padding: 2px 7% 2px 7%;
         background-color: #FF6060;
         border-radius: 10px;
         color: white;
@@ -285,7 +289,10 @@
 
     .propName{
         max-width: 40px;
-        text-align: right;
+        
+        display: flex;
+        justify-content: flex-end;
+        text-align: end;
     }
 
     .propPix{
@@ -299,6 +306,10 @@
     .leRating{
         display: flex;
         justify-items: center;
+    }
+
+    .starImg{
+        width: 25px;
     }
 
 
