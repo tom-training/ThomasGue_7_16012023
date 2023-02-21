@@ -1,10 +1,15 @@
+// Importation du style
 import HomeCSS from '../../style/Home.module.css'
+
+// Importation des composants
 import Header from '../../components/Header'
 import Loader from '../../components/Loader'
-import { useState, useEffect } from 'react'
-
 import Appart from '../../components/Appart'
 import Banner from '../../components/Banner'
+
+// Utilisation d'outils issue de la "React library", le HOOK useState et le useEffect
+import { useState, useEffect } from 'react'
+
 
 function Home() {
 
@@ -17,15 +22,15 @@ function Home() {
   useEffect(() => {
       
       setDataLoading(true)
+
       fetch(url)
         .then((response) => response.json())
   
         .then((appartData) => 
           
           {
-          setAppartData(appartData)
-          console.log(appartData)
-          setDataLoading(false)
+            setAppartData(appartData)
+            setDataLoading(false)
           })  
         .catch((error)=> console.log(error))
     }, [])
@@ -57,18 +62,21 @@ function Home() {
                     id = {logement.id}
                     titre = {logement.title}
                     cover = {logement.cover}
-                  
                   />  
                 ))
                 
               }  
               
             </div>
+
           )}
+
         </div>
 
       </div>
+
     )
+    
   }
   
   export default Home;

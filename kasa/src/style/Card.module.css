@@ -7,23 +7,18 @@
     }
 
     .leCadre{
-
         display: flex;
         flex-direction: column;
         align-items: center;
     } 
     
     .leCadrePhoto{
-        
-        width: 340px;
-        height: 415px;
+        width: 335px;
+        height: 255px;
         position: relative;
-        
     }
     
-    
     .photoStyle{
-        
         width: 100%;
         height: 100%;
         position: absolute;
@@ -88,22 +83,17 @@
     }
 
     .titleStyle{
-    
         color: #FF6060;
         margin-bottom: 3%;
-        /*text-shadow: 0 2px 2px #C4C4C4; */ 
         font-size: 1.2em;
     }
     
     .locationStyle{
-    
         color: #FF6060;
-        /* text-shadow: 0 2px 2px #C4C4C4; */
         margin-bottom: 3%; 
     }
     
     .lesTags{
-    
         display: flex;
         justify-content: flex-start;
         flex-wrap: wrap;
@@ -113,14 +103,12 @@
     }
     
     .leTag{
-    
         margin: 0 5px 5px 0;
         padding: 1px 10px 1px 10px;
         background-color: #FF6060;
         border-radius: 10px;
         color: white;
     }
-    
     
     .propStyle{
         color: #FF6060;
@@ -156,9 +144,7 @@
         width: 20px;
     }
     
-    
     .lesDeuxBlocs{
-    
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -168,27 +154,21 @@
     }
 }
 
-
 @media (min-width: 575.99px){
 
     .leCadre{
-
         display: flex;
         flex-direction: column;
         align-items: center;
-        
     } 
 
     .leCadrePhoto{
-        
-        width: 90%;
+        width: 1240px;
         height: 415px;
         position: relative;
     }
 
-
     .photoStyle{
-        
         width: 100%;
         height: 100%;
         position: absolute;
@@ -200,14 +180,12 @@
         margin: 0;
         padding: 0;
         border-radius: 25px;
-        
     }
 
     .arrowleftStyle{
         position: absolute;
         left: 0;
         top: 40%;
-        
         z-index: 1;
         margin: 0;
         padding: 0;
@@ -220,7 +198,6 @@
         z-index: 1;
         margin: 0;
         padding: 0;
-    
     }
 
     .chiffragePhoto{
@@ -248,19 +225,15 @@
 
         color: #FF6060;
         margin: 2% 0 2% 0;
-        /* text-shadow: 0 2px 2px #C4C4C4; */
         font-size: 2em;
     }
 
     .locationStyle{
-
         color: #FF6060;
-        /* text-shadow: 0 2px 2px #C4C4C4; */
         margin-bottom: 2%;
     }
 
     .lesTags{
-
         display: flex;
         justify-content: flex-start;
         padding: 0;
@@ -268,7 +241,6 @@
     }
 
     .leTag{
-
         display: flex;
         align-items: center;
         margin-right: 5px;
@@ -278,18 +250,15 @@
         color: white;
     }
 
-
     .propStyle{
         color: #FF6060;
         display: flex;
         align-items: center;
-        justify-content: flex-end;
-        
+        justify-content: flex-end;   
     }
 
     .propName{
         max-width: 40px;
-        
         display: flex;
         justify-content: flex-end;
         text-align: end;
@@ -300,7 +269,6 @@
         background-color: #C4C4C4;
         width: 64px;
         height: 64px;
-
     }
 
     .leRating{
@@ -312,9 +280,7 @@
         width: 25px;
     }
 
-
     .lesDeuxBlocs{
-
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;

@@ -12,8 +12,6 @@ function Banner(props){
     return(
 
             <div className = {BannerCSS.cadreBanner}>
-
-                
                     
                 {avec && 
                 
@@ -23,20 +21,10 @@ function Banner(props){
                     <p className={BannerCSS.imgTexte}>Chez vous, partout et ailleurs</p>
                 </div>    
                 }
-                    
-            
-    
-        
+                            
                 {avec === false && <img src={BannerImg} alt="Chez vous partout et ailleurs!" className={BannerCSS.imgBanner} />} 
 
-
             </div>
-               
-            
-        
-        
-
-
     )
 }
 

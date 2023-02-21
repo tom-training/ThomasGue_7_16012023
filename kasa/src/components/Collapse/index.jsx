@@ -1,18 +1,21 @@
+// Import d'outil de la bibliothèque REACT
 import { useState} from 'react'
 
+// Import d'images
 import Vector from '../../assets/Vector.svg'
 import OpenVector from '../../assets/OpenVector.png'
 
+// Import de fichier de style
 import CollapseCSS from '../../style/Collapse.module.css'
 
 function Collapse({nom, descrip}){
-
 
     const [display, setDisplay] = useState(false)
 
     return(
 
                 <div className={`${CollapseCSS.lesSousBlocs} ${CollapseCSS.leSousBlocDesc}`}>
+
                       <div className= {CollapseCSS.boutonPlusInfo} onClick={()=>{
                         if(display){setDisplay(false)}
                         else{setDisplay(true)}
@@ -40,6 +43,5 @@ function Collapse({nom, descrip}){
                 </div>     
     )
 }
-
 
 export default Collapse

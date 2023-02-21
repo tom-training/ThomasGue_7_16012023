@@ -21,3 +21,5 @@ Attention veuillez rooter sur le répertoire ThomasGue_7_16012023
 git add --all
 git commit -m "intitulé du commit"
 git push -u Proj main
+
+3- Le code React Router est sauvegardé sur le fichier kasa/src/index.jsx

@@ -1,28 +1,21 @@
 @media (max-width: 575.98px) {
 
     .appartBulle{
-
         border-radius: 10px;
         height: 340px;
         width: 340px;
         text-decoration: none;
         color: #FFFFFF;
-    
         display: flex;
         justify-content: flex-start;
         align-items: flex-end;
-    
         margin: 6px;
         padding: 6px;
-        
         background: linear-gradient(180deg, #FF6060 0%, #000000 100%);
-    
         position: relative;
-
     }
     
     .appartImage{
-    
         position: absolute;
         top: 0;
         left: 0;
@@ -35,7 +28,6 @@
     }
     
     .appartTexte{
-    
         color: white;
         z-index: 1;
         width: 30%;
@@ -47,27 +39,21 @@
 @media (min-width: 575.99px) {
     
     .appartBulle{
-
         border-radius: 10px;
         height: 340px;
         width: 340px;
         text-decoration: none;
         color: #FFFFFF;
-
         display: flex;
         justify-content: flex-start;
         align-items: flex-end;
-
         margin: 10px;
         padding: 10px;
-        
         background: linear-gradient(180deg, #FF6060 0%, #000000 100%);
-
         position: relative;
     }
 
     .appartImage{
-
         position: absolute;
         top: 0;
         left: 0;
@@ -80,7 +66,6 @@
     }
 
     .appartTexte{
-
         color: white;
         z-index: 1;
     }

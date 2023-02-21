@@ -1,7 +1,6 @@
 @media (max-width: 575.98px){
 
     .cadreBanner{
-
         margin: 0;
         padding: 0;
         width: 100%;
@@ -12,13 +11,11 @@
 
       
     .imgBanner{
-    
         margin: 0;
         width: 340px;
         height: 111px;
         border-radius: 10px;
         object-fit: cover;
-        
     }
 
       .imgTexte{
@@ -36,14 +33,11 @@
 @media (min-width: 575.99px){
 
     .cadreBanner{
-
         margin: 0;
         padding: 0;
-        
         width: 100%;
         display: flex;
         justify-content: center;
-        
     }
 
     /* Uniquement sur la page home, cette classe et la div correspondante absente sur A propos */
@@ -55,12 +49,10 @@
         position: relative;
         display: flex;
         justify-content: center;
-
     }
 
        
     .imgBanner{
-    
         margin: 0;
         width: 90%;
         object-fit: cover;

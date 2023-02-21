@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import AppartCSS from '../../style/Appart.module.css'
 
-
 function Appart({titre, id, cover}){
 
     return(

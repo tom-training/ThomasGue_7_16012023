@@ -3,7 +3,9 @@ import ErrorCSS from '../../style/Error.module.css'
 import { Link } from 'react-router-dom'
 
 function Error() {
+
     return (
+    
         <div className={ErrorCSS.cadreError}>
 
             <Header accueil={false} aprop={false}/>
@@ -12,13 +14,12 @@ function Error() {
 
                 <h1 className={ErrorCSS.title}>404</h1>
 
-                <p className={ErrorCSS.texteError}> Oups! La page que vous demandez n'existe pas.</p>
+                <p className={ErrorCSS.texteError}> Oups! La page que vous demandez n'existe pas. </p>
 
                 <Link to="/" className={ErrorCSS.lien}>Retourner sur la page d'accueil</Link>
 
             </div>
             
-        
         </div>
     )
 }

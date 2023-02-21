@@ -3,8 +3,10 @@ import LoaderCSS from '../../style/Loader.module.css'
 function Loader()
     {
 
-        return (
+        return(
+
             <div className={LoaderCSS.launcher}>
+              
                 <div className={LoaderCSS.launcherTitre}> 
                     
                     <div className={LoaderCSS.launcherTitre__text}> Vos données sont en cours de chargement </div>
