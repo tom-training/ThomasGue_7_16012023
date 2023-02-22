@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/ThomasGue_7_16012023/static/css/main.cd0e0342.css",
+    "main.js": "/ThomasGue_7_16012023/static/js/main.890ec52c.js",
+    "static/media/BannerSloganMob.svg": "/ThomasGue_7_16012023/static/media/BannerSloganMob.159d69c8cac82732199930e2e78c6b65.svg",
+    "static/media/Banner.png": "/ThomasGue_7_16012023/static/media/Banner.93ebd71e7db164475d9a.png",
+    "static/media/LOGO.svg": "/ThomasGue_7_16012023/static/media/LOGO.ac38b36ec692f2f5731bc84c1ac2030e.svg",
+    "index.html": "/ThomasGue_7_16012023/index.html",
+    "static/media/Vector.svg": "/ThomasGue_7_16012023/static/media/Vector.3217e7bc24fd5c315d4a363924e4cabb.svg",
+    "static/media/GreyStar.svg": "/ThomasGue_7_16012023/static/media/GreyStar.6675cad5e82b20562acb00a246ae8821.svg",
+    "static/media/star.svg": "/ThomasGue_7_16012023/static/media/star.2e8b6d39ec10b49881098ba3b0210363.svg",
+    "static/media/arrowbck.svg": "/ThomasGue_7_16012023/static/media/arrowbck.cdd03842d31401ee166dc7512d262702.svg",
+    "static/media/arrowfd.svg": "/ThomasGue_7_16012023/static/media/arrowfd.56557f942edffe00a45e68dee308575a.svg",
+    "main.cd0e0342.css.map": "/ThomasGue_7_16012023/static/css/main.cd0e0342.css.map",
+    "main.890ec52c.js.map": "/ThomasGue_7_16012023/static/js/main.890ec52c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cd0e0342.css",
+    "static/js/main.890ec52c.js"
+  ]
+}
