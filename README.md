@@ -23,3 +23,12 @@ git commit -m "intitulé du commit"
 git push -u Proj main
 
 3- Le code React Router est sauvegardé sur le fichier kasa/src/index.jsx
+
+
+
+
+A CONSERVER:
+/* "homepage": "https://tom-training.github.io/ThomasGue_7_16012023", */
+A coller dans le package.json le cas échéant
+
+https://cra.link/deployment

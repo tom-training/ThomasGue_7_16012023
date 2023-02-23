@@ -10,29 +10,27 @@ import Banner from '../../components/Banner'
 // Utilisation d'outils issue de la "React library", le HOOK useState et le useEffect
 import { useState, useEffect } from 'react'
 
-
 function Home() {
 
   const [appartData, setAppartData] = useState([])
 
-  const [isDataLoading, setDataLoading] = useState(false)
+  const [isDataLoading, setDataLoading] = useState(false)  
 
-  const url = './liste.json'
 
-  useEffect(() => {
-      
+
+  useEffect(() => {    
+
+    
       setDataLoading(true)
 
-      fetch(url)
+      fetch("liste.json")
         .then((response) => response.json())
-  
-        .then((appartData) => 
-          
-          {
-            setAppartData(appartData)
-            setDataLoading(false)
-          })  
+        .then((appartData) => {
+                  setAppartData(appartData)
+                  setDataLoading(false)
+              })
         .catch((error)=> console.log(error))
+
     }, [])
 
     return (

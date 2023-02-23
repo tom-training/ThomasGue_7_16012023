@@ -15,11 +15,15 @@ root.render(
   
       <Routes>
 
+        
         <Route exact path="/" element={<Home />} />
         <Route path="/card/:id" element={<Card />} />
+        
         <Route path="/a_propos" element={<Apropos />} />
+        
         <Route path="/error" element={<Error />} />
-        <Route path="/*" element={<Error />} />
+        
+        <Route path="*" element={<Error />} />
  
       </Routes>
 
