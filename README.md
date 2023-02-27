@@ -27,8 +27,19 @@ git push -u Proj main
 
 
 
-A CONSERVER:
+POUR PERMETTRE AU SITE D'ÊTRE HÉBERGÉ SUR GIT HUB PAGES:
 /* "homepage": "https://tom-training.github.io/ThomasGue_7_16012023", */
+
+EN LOCAL:
+"homepage": "/ThomasGue_7_16012023/",
+    ou plus simplement rien, pas de homepage, dans ce cas "/ThomasGue_7_16012023/" est remplacé par "/"
+    dans les path des fichiers listés ci-dessous
+
 A coller dans le package.json le cas échéant
+
+Ensuite, changer les paths  dans src/index.jsx 
+                            dans Header/index.jsx
+                            dans Appart/index.jsx
+                            dans Error/index.jsx
 
 https://cra.link/deployment
