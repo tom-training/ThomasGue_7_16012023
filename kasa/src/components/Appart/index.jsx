@@ -5,7 +5,7 @@ function Appart({titre, id, cover}){
 
     return(
 
-            <Link to ={"/card/" + id} className={AppartCSS.appartBulle}>
+            <Link to ={"/ThomasGue_7_16012023/card/" + id} className={AppartCSS.appartBulle}>
                 <p className={AppartCSS.appartTexte}>{titre}</p>
 
                 <img src={cover} alt="première vue sur l'appartement" className={AppartCSS.appartImage} />    
