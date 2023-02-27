@@ -16,12 +16,12 @@ root.render(
       <Routes>
 
         
-        <Route exact path="/kasa/" element={<Home />} />
-        <Route path="kasa/card/:id" element={<Card />} />
+        <Route exact path="/ThomasGue_7_16012023/" element={<Home />} />
+        <Route path="/ThomasGue_7_16012023/card/:id" element={<Card />} />
         
-        <Route path="kasa/a_propos" element={<Apropos />} />
+        <Route path="/ThomasGue_7_16012023/a_propos" element={<Apropos />} />
         
-        <Route path="kasa/error" element={<Error />} />
+        <Route path="/ThomasGue_7_16012023/error" element={<Error />} />
         
         <Route path="*" element={<Error />} />
  
