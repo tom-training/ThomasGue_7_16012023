@@ -20,7 +20,7 @@ function Header(props) {
   return (
     <nav>
 
-      <Link to="/ThomasGue_7_16012023">
+      <Link to="/ThomasGue_7_16012023/">
         <img alt="logo de kasa" src={Logo} className={HeaderCSS.logo} />
       </Link>
 
@@ -28,11 +28,11 @@ function Header(props) {
 
         {accueil ?(
           
-          <StyledLink to="/ThomasGue_7_16012023" className={HeaderCSS.lien} surlignage={"underline"}>Accueil</StyledLink>
+          <StyledLink to="/ThomasGue_7_16012023/" className={HeaderCSS.lien} surlignage={"underline"}>Accueil</StyledLink>
         
         ):(
           
-          <StyledLink to="/ThomasGue_7_16012023" className={HeaderCSS.lien} surlignage={"none"}>Accueil</StyledLink>
+          <StyledLink to="/ThomasGue_7_16012023/" className={HeaderCSS.lien} surlignage={"none"}>Accueil</StyledLink>
           
         )        
         } 

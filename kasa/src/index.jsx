@@ -16,7 +16,7 @@ root.render(
       <Routes>
 
         
-        <Route exact path="/ThomasGue_7_16012023" element={<Home />} />
+        <Route exact path="/ThomasGue_7_16012023/" element={<Home />} />
         <Route path="/ThomasGue_7_16012023/card/:id" element={<Card />} />
         
         <Route path="/ThomasGue_7_16012023/a_propos" element={<Apropos />} />
