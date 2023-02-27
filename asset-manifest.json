@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ThomasGue_7_16012023/static/css/main.988a54f3.css",
-    "main.js": "/ThomasGue_7_16012023/static/js/main.17a69b6d.js",
+    "main.css": "/ThomasGue_7_16012023/static/css/main.89440c4a.css",
+    "main.js": "/ThomasGue_7_16012023/static/js/main.f24a66cf.js",
     "static/media/BannerSloganMob.svg": "/ThomasGue_7_16012023/static/media/BannerSloganMob.159d69c8cac82732199930e2e78c6b65.svg",
     "static/media/Banner.png": "/ThomasGue_7_16012023/static/media/Banner.93ebd71e7db164475d9a.png",
     "static/media/LOGO.svg": "/ThomasGue_7_16012023/static/media/LOGO.ac38b36ec692f2f5731bc84c1ac2030e.svg",
@@ -11,11 +11,11 @@
     "static/media/star.svg": "/ThomasGue_7_16012023/static/media/star.2e8b6d39ec10b49881098ba3b0210363.svg",
     "static/media/arrowbck.svg": "/ThomasGue_7_16012023/static/media/arrowbck.cdd03842d31401ee166dc7512d262702.svg",
     "static/media/arrowfd.svg": "/ThomasGue_7_16012023/static/media/arrowfd.56557f942edffe00a45e68dee308575a.svg",
-    "main.988a54f3.css.map": "/ThomasGue_7_16012023/static/css/main.988a54f3.css.map",
-    "main.17a69b6d.js.map": "/ThomasGue_7_16012023/static/js/main.17a69b6d.js.map"
+    "main.89440c4a.css.map": "/ThomasGue_7_16012023/static/css/main.89440c4a.css.map",
+    "main.f24a66cf.js.map": "/ThomasGue_7_16012023/static/js/main.f24a66cf.js.map"
   },
   "entrypoints": [
-    "static/css/main.988a54f3.css",
-    "static/js/main.17a69b6d.js"
+    "static/css/main.89440c4a.css",
+    "static/js/main.f24a66cf.js"
   ]
 }
