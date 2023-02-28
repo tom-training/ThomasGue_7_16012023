@@ -62,7 +62,7 @@
     .imgTexte{
         position: absolute;
         top: 45%;
-        left: 35%;
+        /* left: 35%; */
         color: white;
         font-size: 2em;
     }

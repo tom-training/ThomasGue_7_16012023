@@ -13,13 +13,9 @@ import { useState, useEffect } from 'react'
 function Home() {
 
   const [appartData, setAppartData] = useState([])
-
   const [isDataLoading, setDataLoading] = useState(false)  
 
-
-
   useEffect(() => {    
-
     
       setDataLoading(true)
 
