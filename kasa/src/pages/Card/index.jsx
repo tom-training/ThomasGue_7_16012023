@@ -83,7 +83,7 @@ function Card(){
 
         <Header accueil={false} aprop={false}/>
         
-        <div>
+        <div className={CardCSS.sousHeaderCadre}>
 
             {isDataLoading ?(<Loader />):
             

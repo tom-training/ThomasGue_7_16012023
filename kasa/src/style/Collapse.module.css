@@ -33,6 +33,7 @@
         width: 100%;
         height: 100%; 
         color: #FF6060; 
+        font-size: 0.9em;
     }
     
     .lineText{
@@ -41,7 +42,7 @@
 }
 
 
-@media (min-width: 575.99px){
+@media (min-width: 575.99px) and (max-width: 991.98px){
 
     .lesSousBlocs{
         flex: 1;
@@ -77,5 +78,97 @@
     
     .lineText{
         margin: 3%;
+    }
+
+    .imaVector{
+        margin-right: 1em;
+    }
+}
+
+
+@media (min-width: 991.99px) and (max-width: 1999.99px){
+
+    .lesSousBlocs{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100%;
+        width: 100%;
+        margin-bottom: 5%;
+    }
+    
+    .boutonPlusInfo{
+        background-color: #FF6060;
+        color: white;
+        width: 100%;
+        height: 52px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 10px;
+    }
+    
+    .descDiv{
+        padding: 3%;
+    } 
+    
+    .textDisplayed{
+        background-color: #F6F6F6;
+        width: 100%;
+        height: 100%; 
+        color: #FF6060;
+    }
+    
+    .lineText{
+        margin: 3%;
+    }
+
+    .imaVector{
+        margin-right: 1em;
+    }
+}
+
+
+@media (min-width: 2000.00px){
+
+    .lesSousBlocs{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100%;
+        width: 100%;
+        margin-bottom: 5%;
+    }
+    
+    .boutonPlusInfo{
+        background-color: #FF6060;
+        color: white;
+        width: 100%;
+        height: 52px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 10px;
+    }
+    
+    .descDiv{
+        padding: 3%;
+    } 
+    
+    .textDisplayed{
+        background-color: #F6F6F6;
+        width: 100%;
+        height: 100%; 
+        color: #FF6060;
+    }
+    
+    .lineText{
+        margin: 3%;
+    }
+
+    .imaVector{
+        margin-right: 1em;
     }
 }

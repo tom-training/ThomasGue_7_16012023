@@ -7,20 +7,31 @@
         align-items: center;   
     }
 
+    .sHomeCadre{
+        width: 90%;
+    }
+
     .homeStyle{
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         align-items: center;
         padding: 0;
+        width: 100%;
         margin: 2% 0 2% 0;
     }
 }
 
-@media (min-width: 575.99px){
+@media (min-width: 575.99px) and (max-width: 991.98px){
+    
+    .homeCadre{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
     .sHomeCadre{
-        width: 100%;
+        width: 90%;
         display: flex;
         justify-content: center;
         padding: 0;
@@ -31,7 +42,63 @@
         flex-wrap: wrap;
         justify-content: center;
         background-color: #F6F6F6;
-        width: 89%;
+        width: 100%;
+        border-radius: 10px;
+        margin: 3% 0 3% 0;
+        padding: 2% 1px 2% 1px;
+    }
+}
+
+
+@media (min-width: 991.99px) and (max-width: 1999.99px){
+
+    .homeCadre{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sHomeCadre{
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .homeStyle{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: #F6F6F6;
+        width: 100%;
+        border-radius: 10px;
+        margin: 3% 0 3% 0;
+        padding: 2% 1px 2% 1px;
+    }
+}
+
+
+@media (min-width: 2000.00px){
+
+    .homeCadre{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .sHomeCadre{
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .homeStyle{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: #F6F6F6;
+        width: 100%;
         border-radius: 10px;
         margin: 3% 0 3% 0;
         padding: 2% 1px 2% 1px;

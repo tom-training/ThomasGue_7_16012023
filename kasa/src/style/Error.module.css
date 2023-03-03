@@ -23,21 +23,105 @@
     
     .texteError{
         margin: 2% 0 5% 0;
+        width: 20%;
         padding: 0;
-        font-size: 1.7em;
-        width: 93%;
+        font-size: 1em;
+        width: 62%;
         text-align: center;
     }
     
     .lien{
         color: #FF6060;
-        margin: 5% 0 35% 0;
+        margin: 20% 0 15% 0;
         padding: 0;
+        font-size: 0.8em;
     }
 }
 
-@media (min-width: 575.99px){
+@media (min-width: 575.99px) and (max-width: 991.98px){
 
+    .cadreError{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .leCadre{
+        color: #FF6060;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 0 5% 0;
+        padding: 0;
+    }
+
+    .title{
+        font-size: 10em;
+        margin: 0 0 4% 0;
+        padding: 0;
+    }
+
+    .texteError{
+        margin: 0 0 7% 0;
+        padding: 0;
+        font-size: 1.5em;
+    }
+
+    .lien{
+        color: #FF6060;
+        margin: 0;
+        padding: 0;
+    }
+    
+}
+
+
+@media (min-width: 991.99px) and (max-width: 1999.99px){
+
+    .cadreError{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .leCadre{
+        color: #FF6060;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 0 5% 0;
+        padding: 0;
+    }
+
+    .title{
+        font-size: 10em;
+        margin: 0 0 4% 0;
+        padding: 0;
+    }
+
+    .texteError{
+        margin: 0 0 7% 0;
+        padding: 0;
+        font-size: 1.5em;
+    }
+
+    .lien{
+        color: #FF6060;
+        margin: 10% 0 10% 0;
+        padding: 0;
+        font-size: 0.9em;
+    }
+    
+}
+
+@media (min-width: 2000.00px){
+
+    .cadreError{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
     .leCadre{
         color: #FF6060;
         display: flex;
