@@ -28,11 +28,11 @@ function Header(props) {
 
         {accueil ?(
           
-          <StyledLink to="/ThomasGue_7_16012023" className={HeaderCSS.lien} surlignage={"underline"}>Accueil</StyledLink>
+          <StyledLink to="/ThomasGue_7_16012023/" className={HeaderCSS.lien} surlignage={"underline"}>Accueil</StyledLink>
         
         ):(
           
-          <StyledLink to="/ThomasGue_7_16012023" className={HeaderCSS.lien} surlignage={"none"}>Accueil</StyledLink>
+          <StyledLink to="/ThomasGue_7_16012023/" className={HeaderCSS.lien} surlignage={"none"}>Accueil</StyledLink>
           
         )        
         } 
