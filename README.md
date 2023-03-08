@@ -28,7 +28,14 @@ git push -u Proj main
 
 
 POUR PERMETTRE AU SITE D'ÊTRE HÉBERGÉ SUR GIT HUB PAGES:
+in order to deploy on github pages we have to add the following line in the package.json
 /* "homepage": "https://tom-training.github.io/ThomasGue_7_16012023", */
+
+then in index.jsx (file coding the routing):
+the root path becomes: /ThomasGue_7_16012023/ and then change the following paths accordingly
+
+then cd kasa in the terminal and run : npm run deploy
+
 
 EN LOCAL:
 "homepage": "/ThomasGue_7_16012023/",
