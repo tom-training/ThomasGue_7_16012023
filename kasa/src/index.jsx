@@ -15,13 +15,13 @@ root.render(
   
       <Routes>
 
-        <Route exact path="/ThomasGue_7_16012023/" element={<Home />} />
+        <Route exact path="/" element={<Home />} />
         
-        <Route path="/ThomasGue_7_16012023/card/:id" element={<Card />} />
+        <Route path="/card/:id" element={<Card />} />
         
-        <Route path="/ThomasGue_7_16012023/a_propos" element={<Apropos />} />
+        <Route path="/a_propos" element={<Apropos />} />
         
-        <Route path="/ThomasGue_7_16012023/error" element={<Error />} />
+        <Route path="/error" element={<Error />} />
         
         <Route path="*" element={<Error />} />
  
